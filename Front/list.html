@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link  rel="shortcut icon" href="imagens/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="barra"> 
+        <nav role="navigation">
+         <ul class="nav">
+          <li><a href="home.html">Home</a></li>
+         </ul>
+        </nav>
+         <img id="image" src="imagens/logo-tudobonus-branco.svg" alt=""> <div><a href="https://loja.tudobonus.com.br/" target="_blank" style="margin-left: auto;" id="button">IR PARA LOJA</a></div>
+        
+     </header> <br><br>
+
+     
+     
+
+
+
+     <div>
+        <button style=" margin-right: 950px; " id="vamos">Buscar</button><br><br>
+        <table >
+         <caption>Vendas Realizadas</caption>
+         <thead >
+            <tr class="thead">
+                <th scope="col" >Id</th>
+                <th scope="col">Id_Produtos</th>
+                <th scope="col">Valor_Total</th>
+                <th scope="col">Valor_Com_Desconto</th>
+                <th scope="col">Valor_Do_Desconto</th>
+                
+            </tr>
+          </thead>
+          <tbody id="tbody">
+
+          </tbody>
+        </table >
+    </div>
+
+     <script src="controller/controller.js"></script>
+     <script src="Models/Model.js"></script>
+</body>
+</html>

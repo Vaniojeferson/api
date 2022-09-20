@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo Bônus Saldão</title>
+    <link  rel="shortcut icon" href="imagens/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <header id="barra"> 
+       <nav role="navigation">
+        <ul class="nav">
+         <li><a href="list.html">Pagamentos</a></li>
+        </ul>
+       </nav>
+        <img id="image" src="imagens/logo-tudobonus-branco.svg" alt=""> <div><a href="https://loja.tudobonus.com.br/" target="_blank" style="margin-left: auto;" id="button">IR PARA LOJA</a></div>
+       
+    </header> <br><br>
+
+    <div  id="controll">
+        
+        <p>Código: <input type="number" id="codigo"> 
+        <button class="abc" id="buscar" type="button" > Buscar</button></p>
+        
+        <button id="generatePayment" class="abc" >Gerar Pagamento</button>
+
+        <button id="clean" class="abc" >Nova venda/Limpar</button> <p>
+
+        <p>Tipo de desconto:
+            <select id="tipodesconto" >
+                <option value="."></option>
+                <option value="%">%</option>
+                <option value="R$">R$</option>
+            </select>
+        </p>  
+        Desconto: <input type="number" id="desconto" > 
+        <button class="abc" id="pagamento">Aplicar</button ></p>
+        <div  id="resumo" style="text-align:center ;">
+            <p style="display: none; position: relative; cursor: pointer; margin-left: 250px; color: red; font-size: 10px;" id="t">XFechar</p>
+        </div> 
+    </div>
+
+    <br>
+
+    <div  id="carrinho" ></div>
+
+    <div style="margin-top:5px ;" id="total"></div>
+    <div style="margin-top:5px ;" id="resDesconto"></div>
+    <div style="margin-top:5px ;" id="valueDesconto"></div>
+     
+        
+    
+    
+    
+           
+    <div id="dados" style="display:none ;">
+        <strong ><p id="paragrafo" >Área de Pagamento</p></strong>
+        <img style="border:1px groove black;" id="qr">
+        <div id="pix" style="display: none ;"></div> 
+        <img id="icone" style=" position: relative; margin-left:5px;" src="imagens/ZapIcon.png" >
+    </div>
+
+
+    
+    
+
+    <!--<script src="conection/conection.js"></script>-->
+    
+    <script src="controller/controller.js"></script>
+    <script src="Models/Model.js"></script>
+   
+   
+</body>
+</html>

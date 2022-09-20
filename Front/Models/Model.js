@@ -1,0 +1,2 @@
+
+window.vendas = new controller();
