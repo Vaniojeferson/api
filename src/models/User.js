@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 
+
 class User extends Model {
     static init(sequelize){
         super.init({
@@ -8,7 +9,7 @@ class User extends Model {
             valor: DataTypes.STRING,
         },{
             sequelize,
-            tableName: 'lista'
+            tableName: 'listas778'
         })
 
     }

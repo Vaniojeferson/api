@@ -214,8 +214,6 @@ class controller{
             
             this.showPag(data);
 
-            
-            
         }catch (error) {
             console.log(error);
     
@@ -224,9 +222,6 @@ class controller{
     }
 
     showPag(dados){
-        
-
-        
         
         let tbody = document.getElementById('tbody'); 
         //console.log(tbody.tr)

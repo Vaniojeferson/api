@@ -5,7 +5,7 @@ const sequelize = require("sequelize");
 module.exports = {
   async up (queryInterface, Sequelize) {
     
-    await queryInterface.createTable('lista', { 
+    await queryInterface.createTable('listas778', { 
       id:{
         type: sequelize.INTEGER,
         autoIncrement: true,
@@ -26,11 +26,11 @@ module.exports = {
        },
       created_at:{
         type: sequelize.DATE,
-        allowNull: false,
+        allowNull: true,
        },
       updated_at:{
         type: sequelize.DATE,
-        allowNull: false,
+        allowNull: true,
       }
       
     });
