@@ -165,7 +165,7 @@ class controller{
         var id = this._código.value;
                
         try {
-            const response = await fetch('http://localhost:3333/lista/'+ id);
+            const response = await fetch('https://saldao.herokuapp.com/lista/'+ id);
             const data = await response.json();
             this.show(data);
             
@@ -209,7 +209,7 @@ class controller{
     async getPagamentos(){
             
         try {
-            const response = await fetch('http://localhost:3333/pagamentos');
+            const response = await fetch('https://saldao.herokuapp.com/pagamentos');
             const data = await response.json();
             
             this.showPag(data);
