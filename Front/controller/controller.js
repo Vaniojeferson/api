@@ -202,7 +202,7 @@ class controller{
             
         }    
     
-        await fetch('http://localhost:3333/pagamentos',init);
+        await fetch('https://saldao.herokuapp.com/pagamentos',init);
         
     }
 
