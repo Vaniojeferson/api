@@ -1,4 +1,9 @@
-const app = require('./app');
-require('./database/index')
+ const dotenv = require('dotenv') 
+ const app = require('./app');
+ require('./database/index');
 
-app.listen(3333);
+
+ dotenv.config();
+
+ app.listen(process.env.PORT || 3333);
+ 

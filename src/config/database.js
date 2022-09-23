@@ -1,8 +1,11 @@
 var base = 'produtos'
 
+
 module.exports = {
+    
     dialect:'postgres',
-    host: 'https://vaniojeferson.github.io/api/',
+    port: 5432,
+    host: 'localhost',
     username: 'postgres',
     password: 'admin',
     database: base,
