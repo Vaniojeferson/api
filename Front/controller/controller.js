@@ -68,7 +68,7 @@ class controller{
         this._teste = document.getElementById('list');
 
 
-
+        
        
 
         this.inicialize();
@@ -167,15 +167,17 @@ class controller{
         try {
             const response = await fetch('https://saldao.herokuapp.com/lista/'+ id);
             const data = await response.json();
-            this.show(data);
-            
+            this.show(data);  
+    
         }catch (error) {
             console.log(error);
+           // this.loading();
     
         }
 
         this._código.value = '';
         this._código.focus();
+        
 
         
     }
@@ -188,7 +190,8 @@ class controller{
             idprodutos: String(this._arrayCod),
             valortotal: this.sumTot(this._arrayValores).toFixed(2).replace('.',','),
             valorcomdesconto:  this.descontar().toFixed(2).replace('.',','),
-            valordodesconto: (this.sumTot(this._arrayValores) - this.descontar()).toFixed(2).replace('.',',')
+            valordodesconto: (this.sumTot(this._arrayValores) - this.descontar()).toFixed(2).replace('.',','),
+            datavenda: new Date()
             
         }
 
@@ -213,15 +216,22 @@ class controller{
             const data = await response.json();
             
             this.showPag(data);
+            
 
         }catch (error) {
             console.log(error);
+            this.loading();
     
         }  
 
     }
 
     showPag(dados){
+        
+        const form = Intl.DateTimeFormat('pt-br',{
+            dateStyle: 'full'
+        })
+
         
         let tbody = document.getElementById('tbody'); 
         //console.log(tbody.tr)
@@ -244,7 +254,10 @@ class controller{
 
             let valor_dodesconto = tr.insertCell();
             valor_dodesconto.innerHTML = dados[i].valordodesconto;
-        
+
+            //let valor_data = tr.insertCell();
+            //valor_data.innerHTML = form(dados[i].datavenda);
+            
         }
  
         
@@ -253,6 +266,8 @@ class controller{
 
     
     show(dados){
+
+       
         this._arrayCod.push(dados.id);
         this._arrayValores.push(parseInt(dados.valor));
         let soma = this.sumTot(this._arrayValores);
@@ -276,6 +291,8 @@ class controller{
             carrinho.style.background= "#C8DFF4";
             total.style.background= "#C8DFF4"; 
         }
+
+        
         
     }
 
@@ -390,6 +407,7 @@ class controller{
         this._qrCode.src = googleAPI
 
         this.showPanelCreate(); 
+
         
     }
    
@@ -415,6 +433,15 @@ class controller{
         return  ((crc ^ 0) & 0xFFFF); 
     }
 
+    loading(){
+          
+        const div = document.createElement('div');     
+        div.classList.add('loader', 'centralize');
+       
+        document.body.appendChild(div);
+    }
+
+    
    
 
     get codigo(){

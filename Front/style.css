@@ -104,7 +104,8 @@
 body{
     background-color:rgb(255, 255, 255);
     padding-top: 80px;
-    text-align: center;    
+    text-align: center;  
+    margin: 0;  
 }
   
 
@@ -236,5 +237,32 @@ th,td{
     /*font-weight: bold;*/
 }
 
+.centralize{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.loader{
+   /* background-color: rgba(0, 0, 0, 0.5);*/
+    height: 80px;
+    width: 80px;
+    position: relative;
+    margin-left: 45%;
+    border: 12px solid #e3e3e3;
+    border-radius: 50%;
+    border-right-color: #4070f4;
+    animation: spin 1s ease infinite;
+    
+}
 
 
+@keyframes spin {
+    100%{
+        transform: rotate(360deg);
+    }
+
+}

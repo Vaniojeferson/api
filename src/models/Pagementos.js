@@ -7,6 +7,7 @@ class User extends Model {
             valortotal: DataTypes.STRING,
             valorcomdesconto: DataTypes.STRING,
             valordodesconto: DataTypes.STRING,
+            
         },{
             sequelize,
             tableName: 'valores_recebidos'
